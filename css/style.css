@@ -1,0 +1,51 @@
+.Header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    line-height: 90px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.Header:hover {
+    color: #202124;
+    background: #fff;
+}
+
+.Header.on {
+    color: #202124;
+    background: #fff;
+    line-height: 70px;
+}
+
+.Header h1 a {
+    display: inline-block;
+    width: 170px;
+    height: 70px;
+    background: url(../images/logo_white.png)no-repeat;
+    font-size: 0;
+    vertical-align: middle;
+}
+
+.Header:hover h1 a {
+    background: url(../images/logo_black.png)no-repeat;
+}
+
+.Header:hover h1 a {
+    background: url(../images/logo_black.png)no-repeat;
+}
+
+.Header .header_wrap {
+    display: flex;
+    max-width: 1600px;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+
+
+.MainVisual {
+    position: relative;
+}
