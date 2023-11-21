@@ -44,8 +44,76 @@
     padding: 0 15px;
 }
 
+.Header .header_wrap .Gnb>ul {
+    display: flex;
+    gap: 80px;
+}
 
-
-.MainVisual {
+.Header .header_wrap .Gnb>ul>li {
     position: relative;
+}
+
+.Header .header_wrap .Gnb>ul>li .Sub {
+    position: absolute;
+    left: 50%;
+    top: 90px;
+    z-index: 1;
+
+    transition: 0.2s;
+    height: 0;
+    overflow: hidden;
+
+    background: #fff;
+    line-height: 30px;
+
+    transform: translate(-50%, 0);
+}
+
+.Header .Gnb:hover>ul>li .Sub {
+    height: 200PX;
+}
+
+.Header .Gnb>ul>li .Sub a {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    word-break: keep-all;
+}
+
+.Header .Gnb::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: #fff;
+    z-index: 1;
+    transition: 0.2s;
+    height: 0;
+}
+
+.Header .Gnb:hover::before {
+    height: 200px;
+}
+
+
+/* .MainVisual {
+    position: relative;
+} */
+
+.MainVisual .VisualSlide .itm {
+    height: 900px;
+}
+
+.MainVisual .VisualSlide .itm01 {
+    background: url(../images/mainBanner_001.jpg)no-repeat center center/cover;
+}
+
+.MainVisual .VisualSlide .itm02 {
+    background: url(../images/mainBanner_002.jpg)no-repeat center center/cover;
+}
+
+.MainVisual .VisualSlide .itm03 {
+    background: url(../images/mainBanner_003.jpg)no-repeat center center/cover;
 }
