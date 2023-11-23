@@ -1,6 +1,6 @@
-* {
+/* * {
     outline: 1px solid tomato;
-}
+} */
 
 .Header {
     position: absolute;
@@ -52,7 +52,7 @@
 }
 
 .Header .header_wrap .Gnb {
-    margin: 0 0 0 auto;
+    margin: 0 120px 0 auto;
     white-space: nowrap;
 }
 
@@ -68,11 +68,16 @@
 
 .Header .header_wrap .Gnb>ul {
     display: flex;
-    gap: 80px;
+    gap: 90px;
 }
 
 .Header .header_wrap .Gnb>ul>li {
     position: relative;
+    font-weight: 500;
+}
+
+.Header .header_wrap .Gnb>ul>li:hover  {
+    color: #C4004A;
 }
 
 .Header .header_wrap .Gnb>ul>li .Sub {
@@ -161,6 +166,8 @@
     max-width: 1200px;
     width: 100%;
     padding: 0 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .MainVisual .VisualSlide .itm .slogan strong {
@@ -199,12 +206,24 @@
     max-width: 1200px;
     margin: 0 auto 24px auto;
     padding: 0 15px;
+
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: -24px;
+    z-index: 999;
 }
 
+
 .MainContent .title h2 {
-    font-size: 32px;
+    /* font-size: 32px;
     font-weight: 700;
-    margin: 0 0 16px 0;
+    margin: 0 0 16px 0; */
+
+    display: inline-block;
+    opacity: 1;
+    line-height: 1;
+    font-size: 88px;
+    font-weight: 700;
 }
 
 .MainContent .Content_inner {
@@ -218,6 +237,9 @@
 .MainContent .Content_inner .tab_menu {
     flex: 0 0 400px;
     overflow: hidden;
+    box-sizing: border-box;
+    height: 200px;
+    margin: 80px 0 0 0;
 }
 
 .MainContent .Content_inner .tab_content {
@@ -226,7 +248,8 @@
 }
 
 .MainContent .tab_menu {
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
 }
 
 .MainContent .tab_content li {
@@ -286,22 +309,15 @@
 }
 
 
-.tab_left_slide {}
-
-.MainContent .arrows {
-    display: flex;
-    align-self: flex-start;
-    border: 1px solid tomato;
+.MainContent .tab_menu li{
+    flex: 1;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    /* margin: 24px 0;
+    padding: 40px 0 0 0; */
 }
 
-.MainContent .arrows li~li {
-    border-left: 1px solid #fff;
-}
-
-.MainContent .arrows button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    color: tomato;
+.MainContent .tab_menu li:hover a{
+    color: #C4004A;
 }
