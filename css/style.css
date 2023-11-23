@@ -1,8 +1,13 @@
+* {
+    outline: 1px solid tomato;
+}
+
 .Header {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 999;
 
     line-height: 90px;
     background: rgba(0, 0, 0, 0.2);
@@ -20,10 +25,14 @@
     line-height: 70px;
 }
 
+.Header h1 {
+    font-size: 0;
+}
+
 .Header h1 a {
     display: inline-block;
-    width: 170px;
-    height: 70px;
+    width: 140px;
+    height: 60px;
     background: url(../images/logo_white.png)no-repeat;
     font-size: 0;
     vertical-align: middle;
@@ -39,10 +48,23 @@
 
 .Header .header_wrap {
     display: flex;
-    max-width: 1600px;
-    justify-content: space-between;
-    padding: 0 15px;
+    padding: 0 80px;
 }
+
+.Header .header_wrap .Gnb {
+    margin: 0 0 0 auto;
+    white-space: nowrap;
+}
+
+.Header .header_wrap .util {
+    margin: 0 0 0 auto;
+}
+
+.Header .header_wrap .util i {
+    font-size: 25px;
+}
+
+
 
 .Header .header_wrap .Gnb>ul {
     display: flex;
@@ -75,8 +97,9 @@
 
 .Header .Gnb>ul>li .Sub a {
     display: block;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
+    /* width: 100px; */
     word-break: keep-all;
 }
 
@@ -94,16 +117,66 @@
 }
 
 .Header .Gnb:hover::before {
-    height: 200px;
+    height: 220px;
 }
 
 
-/* .MainVisual {
+.MainVisual {
     position: relative;
-} */
+}
 
 .MainVisual .VisualSlide .itm {
-    height: 900px;
+    position: relative;
+    height: 100vh;
+}
+
+/* .MainVisual .VisualSlide .itm .slogan strong {
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+
+.MainVisual .VisualSlide .itm.on .slogan strong {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.5s;
+}
+
+.MainVisual .VisualSlide .itm .slogan span {
+    display: block;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+
+.MainVisual .VisualSlide .itm.on .slogan span {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.5s 0.5s;
+} */
+
+.MainVisual .VisualSlide .itm .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.MainVisual .VisualSlide .itm .slogan strong {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 60px;
+    color: #fff;
+    margin: 0 0 24px 0;
+    text-shadow: 1px 2px 2px #000;
+}
+
+.MainVisual .VisualSlide .itm .slogan span {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 1px 2px 2px #000;
 }
 
 .MainVisual .VisualSlide .itm01 {
@@ -116,4 +189,119 @@
 
 .MainVisual .VisualSlide .itm03 {
     background: url(../images/mainBanner_003.jpg)no-repeat center center/cover;
+}
+
+.MainContent {
+    padding: 100px 0;
+}
+
+.MainContent .title {
+    max-width: 1200px;
+    margin: 0 auto 24px auto;
+    padding: 0 15px;
+}
+
+.MainContent .title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+}
+
+.MainContent .Content_inner {
+    display: flex;
+    gap: 30px;
+    width: calc((100% - 1200px) / 2 + 1200px);
+    margin: 0 0 0 auto;
+    padding: 0 0 0 15px;
+}
+
+.MainContent .Content_inner .tab_menu {
+    flex: 0 0 400px;
+    overflow: hidden;
+}
+
+.MainContent .Content_inner .tab_content {
+    flex: 1;
+    overflow: hidden;
+}
+
+.MainContent .tab_menu {
+    /* display: flex; */
+}
+
+.MainContent .tab_content li {
+    visibility: hidden;
+    height: 0;
+    /* width: 120%; */
+}
+
+.MainContent .tab_content li.on {
+    visibility: visible;
+    height: auto;
+}
+
+.MainContent .tab_content li figure {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 500px; */
+    /* margin: 0 30px 0 0; */
+}
+
+/* .MainContent .tab_content li figure {
+    width: 200px;
+    height: 200px;
+    transition: none !important;
+}
+
+.MainContent .tab_content li figure.slick-current {
+    width: 500px;
+    height: 500px;
+    transition: none !important;
+} */
+
+/* .MainContent .tab_content li figure img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.MainContent .tab_content li figure.slick-current img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+} */
+.MainContent .tab_content li figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 200px;
+    height: 500px;
+}
+
+.MainContent .tab_content li figure .img_box {}
+
+.MainContent .tab_content li figure.swiper-slide-active {
+    flex: 1 0 500px;
+}
+
+
+.tab_left_slide {}
+
+.MainContent .arrows {
+    display: flex;
+    align-self: flex-start;
+    border: 1px solid tomato;
+}
+
+.MainContent .arrows li~li {
+    border-left: 1px solid #fff;
+}
+
+.MainContent .arrows button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    color: tomato;
 }
