@@ -2,8 +2,9 @@ $(function () {
 
     $('.MainVisual .VisualSlide').slick({
         pauseOnHover: false,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 4000,
         arrows: false,
+        autoplay: true,
     });
 
     $('.tab_menu li a').on('click', function (e) {
@@ -53,5 +54,19 @@ $(function () {
         $('.MainContent .tab_right_slide').slick('slickNext');
     });
 
+    $('.toTop').on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 1000)
+    });
+
+    $(window).on('scroll', function () {
+        const sct = $(window).scrollTop();
+        if (sct > 200) {
+            $('.toTop').addClass('on');
+        } else {
+            $('.toTop').removeClass('on');
+        }
+    });
 });
+
+
 
