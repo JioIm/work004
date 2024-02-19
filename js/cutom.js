@@ -1,5 +1,33 @@
 $(function () {
 
+        $('#main').fullpage({
+        anchors: ["p1", "p2", "p3", "p4"],
+        menu: '#custom_nav',
+        afterLoad: function (anchorLink, index) {
+            console.log(anchorLink, index);
+            if (index == 2 || index == 3) {
+                if (!$('.Gnb').hasClass('on')) {
+                    $('.Header').addClass('on')
+                }
+            } else {
+                $('.Header').removeClass('on')
+            }
+
+            if (index == 4) {
+                $('.Header').hide();
+            } else {
+                $('.Header').show();
+            }
+            $('#custom_nav li').removeClass('active');
+            $('#custom_nav li[data_menuanchor="' + anchorLink + '"]').addClass('active');
+        },
+
+        navigation: false,
+        responsiveWidth: 768,
+        responsiveHeight: 800,
+
+    });
+
     $('.MainVisual .VisualSlide').slick({
         pauseOnHover: false,
         autoplaySpeed: 4000,
@@ -14,17 +42,11 @@ $(function () {
         $('.tab_content li').eq(idx).addClass('on');
     });
 
-    // $('.tab_slide').slick()
+ $('.tab_menu li a').on('click', function() {
+      $('.tab_menu li').removeClass('on');
+     $(this).parent().addClass('on');
+         });
 
-    // $('.MainContent .tab_left_slide').slick({
-    //     slidesToShow: 4,
-    //     //fade: true,
-    //     arrows: false,
-    //     variableWidth: true,
-    //     autoplay: true,
-    //     //speed:0,
-    //     // asNavFor:'.MainContent .tab_left_slide',
-    // });
 
     new Swiper('.mm', {
         slidesPerView: 5,
@@ -34,18 +56,7 @@ $(function () {
             delay: 2500,
             disableOnInteraction: false,
         },
-    })
-
-
-
-    // $('.MainContent .tab_left_slide').on('beforeChange', function(e,s,c){
-    // $('.tab_left_slide figure').eq(c+5).addClass('on').siblings().removeClass('on')
-    // })
-    // $('.MainContent .tab_right_slide').slick({
-    //     arrows: false,
-    //     slidesToShow: 4,
-    //     asNavFor:'.MainContent .tab_right_slide',
-    // })
+    });
 
     $('.MainContent .bt_left').on('click', function () {
         $('.MainContent .tab_left_slide').slick('slickPrev');

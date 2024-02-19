@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/fullpage.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css">
 
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    
     <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/fullpage.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/cutom.js"></script>
 
@@ -107,8 +107,8 @@
                 </div>
             </div>
         </header>
-        <main class="main">
-            <section class="MainVisual">
+        <main id="main" class="main">
+            <section class="MainVisual section fp-auto-height-responsive">
                 <div class="VisualSlide">
                     <div class="itm itm01">
                         <div class="slogan">
@@ -133,7 +133,7 @@
                     scroll
                 </a>
             </section>
-            <section class="MainContent">
+            <section class="MainContent section fp-auto-height-responsive">
                 <div class="title">
                     <h2>BEST MENU</h2>
                 </div>
@@ -259,7 +259,7 @@
                 </div>
 
             </section>
-            <section class="MainProduct">
+            <section class="MainProduct section fp-auto-height-responsive ">
                 <div class="title">
                     <h2>PAUL BASSETT COFFEE BEAN</h2>
                     <span>SIGNATURE BLEND</span>
@@ -292,66 +292,67 @@
                     </div>
                 </div>
             </section>
+            <footer id="Footer" class="Footer section fp-auto-height">
+                <div class="inner_wrap">
+                    <div class="footer_menu">
+                        <dl>
+                            <dt>
+                                <strong>개인정보처리방침</strong>
+                            </dt>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <strong>신규입점안내</strong>
+                            </dt>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <strong>이용약관</strong>
+                            </dt>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <strong>사이트 이용약관</strong>
+                            </dt>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <strong>고객센터</strong>
+                            </dt>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <strong>사이트맵</strong>
+                            </dt>
+                        </dl>
+                    </div>
+                    <div class="address">
+                        <div class="ul_wrap">
+                            <ul>
+                                <li>
+                                    <strong>대표이사</strong>
+                                    <span>김용철</span>
+                                </li>
+                                <li>
+                                    <strong>본사 주소</strong>
+                                    <span>서울특별시 강남구 도산대로 75길 22 (청담동)</span>
+                                </li>
+                                <li>
+                                    <strong>대표 번호</strong>
+                                    <span>1899-8829</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="SNS">
+                            <a href=""><i class="xi-facebook"></i></a>
+                            <a href=""><i class="xi-instagram"></i></a>
+                            <a href=""><i class="xi-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </main>
-        <footer class="footer">
-            <div class="inner_wrap">
-                <div class="footer_menu">
-                    <dl>
-                        <dt>
-                            <strong>개인정보처리방침</strong>
-                        </dt>
-                    </dl>
-                    <dl>
-                        <dt>
-                            <strong>신규입점안내</strong>
-                        </dt>
-                    </dl>
-                    <dl>
-                        <dt>
-                            <strong>이용약관</strong>
-                        </dt>
-                    </dl>
-                    <dl>
-                        <dt>
-                            <strong>사이트 이용약관</strong>
-                        </dt>
-                    </dl>
-                    <dl>
-                        <dt>
-                            <strong>고객센터</strong>
-                        </dt>
-                    </dl>
-                    <dl>
-                        <dt>
-                            <strong>사이트맵</strong>
-                        </dt>
-                    </dl>
-                </div>
-                <div class="address">
-                    <div class="ul_wrap">
-                        <ul>
-                            <li>
-                                <strong>대표이사</strong>
-                                <span>김용철</span>
-                            </li>
-                            <li>
-                                <strong>본사 주소</strong>
-                                <span>서울특별시 강남구 도산대로 75길 22 (청담동)</span>
-                            </li>
-                            <li>
-                                <strong>대표 번호</strong>
-                                <span>1899-8829</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="SNS">
-                        <a href=""><i class="xi-facebook"></i></a>
-                        <a href=""><i class="xi-instagram"></i></a>
-                        <a href=""><i class="xi-youtube-play"></i></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+       
     </div>
 
     <div class="toTop">
@@ -360,3 +361,4 @@
 </body>
 
 </html>
+

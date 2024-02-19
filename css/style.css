@@ -77,7 +77,7 @@
     font-weight: 500;
 }
 
-.Header .header_wrap .Gnb>ul>li:hover {
+.Header .header_wrap .Gnb>ul>li:hover>a {
     color: #C4004A;
 }
 
@@ -105,8 +105,11 @@
     display: block;
     font-size: 14px;
     font-weight: 400;
-    /* width: 100px; */
     word-break: keep-all;
+}
+
+.Header .Gnb .Sub>li:hover>a {
+    color: #C4004A;
 }
 
 .Header .Gnb::before {
@@ -127,6 +130,10 @@
 }
 
 
+
+
+
+
 .MainVisual {
     position: relative;
 }
@@ -135,29 +142,6 @@
     position: relative;
     height: 100vh;
 }
-
-/* .MainVisual .VisualSlide .itm .slogan strong {
-    opacity: 0;
-    transform: translate(0, 100px);
-}
-
-.MainVisual .VisualSlide .itm.on .slogan strong {
-    opacity: 1;
-    transform: translate(0, 0);
-    transition: 0.5s;
-}
-
-.MainVisual .VisualSlide .itm .slogan span {
-    display: block;
-    opacity: 0;
-    transform: translate(0, 100px);
-}
-
-.MainVisual .VisualSlide .itm.on .slogan span {
-    opacity: 1;
-    transform: translate(0, 0);
-    transition: 0.5s 0.5s;
-} */
 
 .MainVisual .VisualSlide .itm .slogan {
     position: absolute;
@@ -254,10 +238,6 @@
 
 
 .MainContent .title h2 {
-    /* font-size: 32px;
-    font-weight: 700;
-    margin: 0 0 16px 0; */
-
     display: inline-block;
     opacity: 1;
     line-height: 1;
@@ -294,7 +274,6 @@
 .MainContent .tab_content li {
     visibility: hidden;
     height: 0;
-    /* width: 120%; */
 }
 
 .MainContent .tab_content li.on {
@@ -302,37 +281,7 @@
     height: auto;
 }
 
-.MainContent .tab_content li figure {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 500px; */
-    /* margin: 0 30px 0 0; */
-}
 
-/* .MainContent .tab_content li figure {
-    width: 200px;
-    height: 200px;
-    transition: none !important;
-}
-
-.MainContent .tab_content li figure.slick-current {
-    width: 500px;
-    height: 500px;
-    transition: none !important;
-} */
-
-/* .MainContent .tab_content li figure img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-
-.MainContent .tab_content li figure.slick-current img {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-} */
 .MainContent .tab_content li figure {
     display: flex;
     flex-direction: column;
@@ -353,11 +302,13 @@
     font-size: 32px;
     font-weight: 500;
     line-height: 40px;
-    /* margin: 24px 0;
-    padding: 40px 0 0 0; */
 }
 
 .MainContent .tab_menu li:hover a {
+    color: #C4004A;
+}
+
+.MainContent .tab_menu li.on a {
     color: #C4004A;
 }
 
@@ -435,7 +386,7 @@
 }
 
 
-.footer {
+/* .footer {
     padding: 30px 0;
     background: #3d3937;
     color: #fff;
@@ -488,7 +439,54 @@
 .footer .SNS i {
     font-size: 30px;
     padding: 8px;
+} */
+
+#Footer {
+    height: 800px;
+    padding: 40px 0 60px 0;
+    background-color: #ddd;
 }
+
+.inner_wrap {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+}
+
+.footer_menu {
+    display: flex;
+}
+
+.footer_menu dl {
+    margin-right: 20px;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+}
+
+.ul_wrap ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ul_wrap li {
+    margin-bottom: 10px;
+}
+
+.SNS a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+
+
 
 .toTop {
     position: fixed;
