@@ -1,7 +1,7 @@
 $(function () {
 
-        $('#main').fullpage({
-        anchors: ["p1", "p2", "p3", "p4"],
+    $('#main').fullpage({
+        anchors: ["p1", "p2", "p3", "p4", "p5"],
         menu: '#custom_nav',
         afterLoad: function (anchorLink, index) {
             console.log(anchorLink, index);
@@ -42,20 +42,20 @@ $(function () {
         $('.tab_content li').eq(idx).addClass('on');
     });
 
- $('.tab_menu li a').on('click', function() {
-      $('.tab_menu li').removeClass('on');
-     $(this).parent().addClass('on');
-         });
+    $('.tab_menu li a').on('click', function () {
+        $('.tab_menu li').removeClass('on');
+        $(this).parent().addClass('on');
+    });
 
 
     new Swiper('.mm', {
         slidesPerView: 5,
         spaceBetween: 30,
         loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false,
+        // },
     });
 
     $('.MainContent .bt_left').on('click', function () {
