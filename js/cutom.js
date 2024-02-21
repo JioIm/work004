@@ -3,6 +3,8 @@ $(function () {
     $('#main').fullpage({
         anchors: ["p1", "p2", "p3", "p4", "p5"],
         menu: '#custom_nav',
+        scrollOverflow: false,
+        navigation: true,
         afterLoad: function (anchorLink, index) {
             console.log(anchorLink, index);
             if (index == 2 || index == 3) {
@@ -22,7 +24,7 @@ $(function () {
             $('#custom_nav li[data_menuanchor="' + anchorLink + '"]').addClass('active');
         },
 
-        navigation: false,
+
         responsiveWidth: 768,
         responsiveHeight: 800,
 
@@ -48,7 +50,7 @@ $(function () {
     });
 
 
-    new Swiper('.mm', {
+    const mm = new Swiper('.mm', {
         slidesPerView: 5,
         spaceBetween: 30,
         loop: true,
@@ -57,6 +59,13 @@ $(function () {
         //     disableOnInteraction: false,
         // },
     });
+
+
+
+
+
+
+
 
     $('.MainContent .bt_left').on('click', function () {
         $('.MainContent .tab_left_slide').slick('slickPrev');

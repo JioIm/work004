@@ -228,7 +228,9 @@
 
 .MainContent .title {
     max-width: 1200px;
-    margin: 0 auto 24px auto;
+
+    margin: 0 auto 0 360px;
+
     padding: 0 15px;
 
     position: relative;
@@ -295,6 +297,17 @@
     flex: 1 0 500px;
 }
 
+.MainContent .tab_content li .page {
+    display: block;
+    width: 400px;
+    height: 56px;
+    overflow: hidden;
+    left: 152px;
+    bottom: 0;
+    border-radius: 0;
+    background: #000;
+}
+
 
 .MainContent .tab_menu li {
     flex: 1;
@@ -311,25 +324,28 @@
     color: #C4004A;
 }
 
+.main-section-story .tabpanel .swiper-pagination-wrap {
+    display: block;
+    width: 424px;
+    height: 56px;
+    overflow: hidden;
+    left: 152px;
+    bottom: 0;
+    border-radius: 0;
+    background: #000;
+}
 
 
 
-.MainIntroduce {}
+
+.MainIntroduce {
+    background: url(../images/PaulBassettBG.jpg)no-repeat center center/cover;
+}
 
 .MainIntroduce .inner_wrap {
     display: flex;
     justify-content: space-between;
 }
-
-.MainIntroduce .img_wrap {
-    width: 600px;
-    height: 100vh;
-    object-fit: cover;
-}
-
-.MainIntroduce .img_wrap>img {}
-
-
 
 
 .MainProduct {
@@ -337,8 +353,6 @@
     margin: 0 auto;
     overflow: hidden;
     padding: 100px 15px;
-
-    background: #F7F7F7;
 }
 
 .MainProduct .title {
@@ -407,52 +421,80 @@
 
 
 .footer {
-    padding: 30px 0;
-    background: #3d3937;
-    color: #fff;
+    background: #ddd;
+
+    height: auto;
+    padding: 60px 0 80px 0;
 }
 
 .footer .inner_wrap {
-    display: block;
-}
-
-.footer .footer_menu {
     display: flex;
-    margin: 0 350px;
-    padding: 0 0 20px 0;
-    line-height: 200%;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 30px;
 
+    color: #3d3937;
 }
 
-.footer .footer_menu dl>dt strong {
+.footer .footer_menu ul {
+    display: flex;
+    gap: 16px;
+}
+
+.footer .footer_menu ul>li {
+    position: relative;
+}
+
+.footer .footer_menu ul>li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -9px;
+    transform: translate(0, -50%);
+    width: 2px;
+    height: 2px;
+    background: #777;
+}
+
+.footer .footer_menu ul>li a {
     word-break: keep-all;
     font-size: 16px;
     font-weight: 500;
-    padding: 0 20px 0 0;
     text-align: left;
 }
 
-.footer .address {
+.footer .footer_menu ul>li strong {
+    font-size: 16px;
+    font-weight: 600;
+    color: #C4004A;
+}
+
+.footer .footer_bottom {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 0 350px;
 }
 
-.footer .address .ul_wrap ul>li {}
+.footer .footer_bottom .ul_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 
-.footer .address .ul_wrap ul>li strong {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px;
+    font-size: 14px;
 }
 
-.footer .address .ul_wrap ul>li span {
-    font-size: 15px;
-    font-weight: 300;
+.footer .footer_bottom .ul_wrap ul {
+    display: flex;
+    gap: 18px;
 }
 
-.footer .SNS {
+.footer .footer_bottom .ul_wrap ul strong {
+    font-weight: 600;
+}
+
+.footer .footer_bottom .ul_wrap .footer .SNS {
     justify-content: space-between;
 }
 
@@ -461,19 +503,7 @@
     padding: 8px;
 }
 
-.Footer {
-    height: 800px;
-    padding: 40px 0 60px 0;
-    background-color: #ddd;
-}
-
-.inner_wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+.inner_wrap {}
 
 
 
@@ -506,4 +536,54 @@
     border-radius: 50%;
     color: #3d3937;
     cursor: pointer;
+}
+
+
+.fp-watermark {
+    display: none;
+}
+
+/* r */
+
+#fp-nav.fp-right {
+    position: fixed;
+    top: 50%;
+    left: 40px;
+    transform: translate(0, -50%);
+    width: 100px;
+}
+
+#fp-nav ul li {
+    width: 2px;
+    margin: 0 0 16px 0;
+}
+
+#fp-nav ul li a {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 10px;
+    font-size: 0;
+}
+
+#fp-nav ul li a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 35%;
+    height: 2px;
+    background: #eee9e5;
+}
+
+#fp-nav ul li a.active::after {
+    width: 100%;
+    transition: width 0.5s;
+    background: #C4004A;
+}
+
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    display: none;
 }
