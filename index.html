@@ -17,6 +17,7 @@
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/fullpage.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/cutom.js"></script>
 
@@ -185,9 +186,12 @@
                                 </div>
                             </div>
                             <div class="page">
-                                <button class="prev">이전</button>
+                                <div class="button_wrap">
+                                    <button class="prev"><i data-feather="arrow-left"></i></button>
+                                    <button class="next"><i data-feather="arrow-right"></i></button>
+                                </div>
                                 <div class="txt">name</div>
-                                <button class="next">다음</button>
+
                             </div>
                         </li>
                         <li>
@@ -227,9 +231,13 @@
                                 </div>
                             </div>
                             <div class="page">
-                                <button class="prev">이전</button>
+
+                                <div class="button_wrap">
+                                    <button class="prev"><i data-feather="arrow-left"></i></button>
+                                    <button class="next"><i data-feather="arrow-right"></i></button>
+                                </div>
                                 <div class="txt">name</div>
-                                <button class="next">다음</button>
+
                             </div>
                         </li>
                         <li>
@@ -268,9 +276,12 @@
                                 </div>
                             </div>
                             <div class="page">
-                                <button class="prev">이전</button>
+                                <div class="button_wrap">
+                                    <button class="prev"><i data-feather="arrow-left"></i></button>
+                                    <button class="next"><i data-feather="arrow-right"></i></button>
+                                </div>
                                 <div class="txt">커피메뉴이름</div>
-                                <button class="next">다음</button>
+
                             </div>
                         </li>
                     </ul>
@@ -278,20 +289,44 @@
 
             </section>
             <section class="MainIntroduce section fp-auto-height-responsive ">
+                <h2 class="blind">barsta paul bassett 소개</h2>
                 <div class="inner_wrap">
-                    <!-- <div class="txt_wrap">
-                        <h2>WBC Champion Paul Bassett</h2>
-                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                    </div> -->
-                    <!-- <figure>
-                        <div class="img_wrap">
-                            <img src="./images/PaulBassettBG2.jpg" alt="">
+                    <div class="txt_wrap">
+                        <div class="intro_txt">
+                            <span>WBC Champion</span>
+                            <strong>Paul Bassett</strong>
                         </div>
-                    </figure> -->
+                        <p>2003년 WBC(세계 바리스타 챔피언십)에서 '역대 최연소 챔피언'을 수상한<br />호주 출신의 바리스타 폴 바셋.
+                            그는 원두의 선정부터 로스팅, 추출까지의 <br />모든 과정에 심혈을 기울여 최고의 커피를 프로듀스합니다.
+                        </p>
+                    </div>
+                    <div class="inner_txt">
+                        <dl>
+                            <dt>
+                                <strong>Awards</strong>
+                                <p>
+                                    <span>2003</span>
+                                    AUSTRALIA BARISTA CHAMPIONSHIP WINNER
+                                    <br />
+                                    <span>2003</span>
+                                    WORLD BARISTA CHAMPIONSHIP WINNER
+                                </p>
+                            </dt>
+                            <dt>
+                                <strong>Introduce</strong>
+                                <p>
+                                    바리스타 폴 바셋은 2003년 당시 Boston, United States에서 개최된
+                                    WBC 대회에서 역대 최연소 및 호주인 최초로 챔피언이라는 타이틀을 수상하였습니다. </br>
+                                    폴 바셋은 당시 초콜릿, 크림, 바닐라 시럽을 이용해 자신의 이름을 딴
+                                    ‘Baccino’ 라는 창작메뉴로 호평을 받았습니다.
+                                    현재 호주 시드니를 거점으로 아시아, 유럽으로도 활동지역을 넓혀
+                                    다방면에 걸친 커피 비즈니스를 전개,
+                                    현재 세계가 주목하고 있는 바리스타 중 한 명입니다.
+                                </p>
+                            </dt>
+                        </dl>
+                    </div>
                 </div>
-
-
             </section>
             <section class="MainProduct section fp-auto-height-responsive ">
                 <div class="title">
@@ -301,6 +336,8 @@
                         폴 바셋은 균형 있는 커피 산업 발전과 좋은 커피 문화 확산을 위해 노력합니다.</br>
                         폴 바셋에서는 커피생산국인 에티오피아 아동을 후원하고 있습니다.
                     </p>
+
+                    <p class="desc">* 원두위에 마우스를 가져가시면 원두의 세부 정보를 보실 수 있습니다.</p>
                 </div>
                 <div class="ProductList">
                     <div class="Product_inner">
@@ -311,7 +348,7 @@
                                 </div>
                                 <div class="txt_box">
                                     <span>폴 바셋 시그니처 블렌드</span>
-                                    <p>달콤한 카라멜과 상큼한 베리류의 향,</br>
+                                    <p>달콤한 카라멜과 상큼한 베리류의 향,<br />
                                         잘 익은 과일의 단 맛과 카카오의 끝맛</p>
                                 </div>
                                 <div class="info_box">
@@ -349,30 +386,30 @@
                                 </div>
                                 <div class="txt_box">
                                     <span>폴 바셋 에티오피아 시다모</span>
-                                    <p>베리류의 화사한 향,</br>
+                                    <p>베리류의 화사한 향,<br />
                                         딸기의 단 맛과 블랙티 처럼 깔끔한 끝 맛</p>
                                 </div>
                                 <div class="info_box">
                                     <div class="info_txt">
                                         <span>Tasting Note</span>
-                                        <p>카라멜, 베리류, 잘 익은 과일, 카카오</p>
+                                        <p>베리류, 딸기, 블랙티</p>
                                     </div>
                                     <dl>
                                         <dt>
                                             <span>원산지</span>
-                                            <p>브라질 60% / 에티오피아 40%</p>
+                                            <p>에티오피아</p>
                                         </dt>
                                         <dt>
                                             <span>지역&농장</span>
-                                            <p>Minas Gerais / Sidamo Guji</p>
+                                            <p>Sidamo Guji</p>
                                         </dt>
                                         <dt>
                                             <span>고도</span>
-                                            <p>700-1350 / 1900-2300</p>
+                                            <p>1900-2300</p>
                                         </dt>
                                         <dt>
                                             <span>품종</span>
-                                            <p>Mundo novo & Catuai / 에티오피아 토착종</p>
+                                            <p>에티오피아 토착종</p>
                                         </dt>
                                         <dt>
                                             <span>가공방식</span>
@@ -387,34 +424,34 @@
                                 </div>
                                 <div class="txt_box">
                                     <span>폴 바셋 콜롬비아 자이로무릴로</span>
-                                    <p>과일류의 향, 포도</br>
+                                    <p>과일류의 향, 포도<br />
                                         자두의 단 맛, 아몬드의 고소한 끝 맛</p>
                                 </div>
                                 <div class="info_box">
                                     <div class="info_txt">
                                         <span>Tasting Note</span>
-                                        <p>카라멜, 베리류, 잘 익은 과일, 카카오</p>
+                                        <p>과일류, 포도, 자두, 아몬드</p>
                                     </div>
                                     <dl>
                                         <dt>
                                             <span>원산지</span>
-                                            <p>브라질 60% / 에티오피아 40%</p>
+                                            <p>콜롬비아 100%</p>
                                         </dt>
                                         <dt>
                                             <span>지역&농장</span>
-                                            <p>Minas Gerais / Sidamo Guji</p>
+                                            <p>Antioquia</p>
                                         </dt>
                                         <dt>
                                             <span>고도</span>
-                                            <p>700-1350 / 1900-2300</p>
+                                            <p>1800-2110</p>
                                         </dt>
                                         <dt>
                                             <span>품종</span>
-                                            <p>Mundo novo & Catuai / 에티오피아 토착종</p>
+                                            <p>Castillo, Caturra</p>
                                         </dt>
                                         <dt>
                                             <span>가공방식</span>
-                                            <p>Natural</p>
+                                            <p>Washed</p>
                                         </dt>
                                     </dl>
                                 </div>
@@ -425,34 +462,34 @@
                                 </div>
                                 <div class="txt_box">
                                     <span>폴 바셋 과테말라 우에우에테낭고</span>
-                                    <p>고소한 견과류, 시나몬의 스파이시한 향 체리,</br>
+                                    <p>고소한 견과류, 시나몬의 스파이시한 향 체리,<br />
                                         석류의 달콤함,자몽의 쌉사름한 끝 맛</p>
                                 </div>
                                 <div class="info_box">
                                     <div class="info_txt">
                                         <span>Tasting Note</span>
-                                        <p>카라멜, 베리류, 잘 익은 과일, 카카오</p>
+                                        <p>견과류, 시나몬, 체리, 석류, 자몽</p>
                                     </div>
                                     <dl>
                                         <dt>
                                             <span>원산지</span>
-                                            <p>브라질 60% / 에티오피아 40%</p>
+                                            <p>과테말라 100%</p>
                                         </dt>
                                         <dt>
                                             <span>지역&농장</span>
-                                            <p>Minas Gerais / Sidamo Guji</p>
+                                            <p>Huehuetenango</p>
                                         </dt>
                                         <dt>
                                             <span>고도</span>
-                                            <p>700-1350 / 1900-2300</p>
+                                            <p>1600-2200</p>
                                         </dt>
                                         <dt>
                                             <span>품종</span>
-                                            <p>Mundo novo & Catuai / 에티오피아 토착종</p>
+                                            <p>Caturra, Catui and Bourbon</p>
                                         </dt>
                                         <dt>
                                             <span>가공방식</span>
-                                            <p>Natural</p>
+                                            <p>Washed</p>
                                         </dt>
                                     </dl>
                                 </div>
@@ -463,67 +500,74 @@
             </section>
             <footer id="footer" class="footer section fp-auto-height">
                 <div class="inner_wrap">
-                    <div class="footer_top">
-                        <div class="footer_menu">
-                            <ul>
-                                <li>
-                                    <a href=""><strong>개인정보처리방침</strong></a>
-                                </li>
-                                <li>
-                                    <a href="">신규입점안내</a>
-                                </li>
-                                <li>
-                                    <a href="">이용약관</a>
-                                </li>
-                                <li>
-                                    <a href=""><strong>위치정보 서비스 이용약관</strong></a>
-                                </li>
-                                <li>
-                                    <a href="">사이트이용약관</a>
-                                </li>
-                                <li>
-                                    <a href="">고객센터</a>
-                                </li>
-                                <li>
-                                    <a href="">사이트맵</a>
-                                </li>
-                            </ul>
+                    <div class="left">
+                        <div class="img_box">
+                            <img src="./images/logo_black.png" alt="">
                         </div>
                     </div>
-                    <div class="footer_bottom">
-                        <div class="ul_wrap">
-                            <ul>
-                                <li>
-                                    <strong>엠즈씨드(주) 대표이사</strong>
-                                    <span>권태훈</span>
-                                </li>
-                                <li>
-                                    <strong>본사 주소</strong>
-                                    <span> 서울특별시 강남구 도산대로 75길 22 (청담동)</span>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <strong>사업자등록번호</strong>
-                                    <span>211-88-95935</span>
-                                </li>
-                                <li>
-                                    <strong>대표번호</strong>
-                                    <span>1899-8829</span>
-                                </li>
-                                <li>
-                                    <strong>개인정보관리책임자</strong>
-                                    <span>정보문</span>
-                                </li>
-                            </ul>
+                    <div class="right">
+                        <div class="footer_top">
+                            <div class="footer_menu">
+                                <ul>
+                                    <li>
+                                        <a href=""><strong>개인정보처리방침</strong></a>
+                                    </li>
+                                    <li>
+                                        <a href="">신규입점안내</a>
+                                    </li>
+                                    <li>
+                                        <a href="">이용약관</a>
+                                    </li>
+                                    <li>
+                                        <a href=""><strong>위치정보 서비스 이용약관</strong></a>
+                                    </li>
+                                    <li>
+                                        <a href="">사이트이용약관</a>
+                                    </li>
+                                    <li>
+                                        <a href="">고객센터</a>
+                                    </li>
+                                    <li>
+                                        <a href="">사이트맵</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="SNS">
-                            <a href=""><i class="xi-facebook"></i></a>
-                            <a href=""><i class="xi-instagram"></i></a>
-                            <a href=""><i class="xi-youtube-play"></i></a>
-                        </div>
-                    </div>
+                        <div class="footer_bottom">
+                            <div class="ul_wrap">
+                                <ul>
+                                    <li>
+                                        <strong>엠즈씨드(주) 대표이사</strong>
+                                        <span>권태훈</span>
+                                    </li>
+                                    <li>
+                                        <strong>본사 주소</strong>
+                                        <span> 서울특별시 강남구 도산대로 75길 22 (청담동)</span>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <strong>사업자등록번호</strong>
+                                        <span>211-88-95935</span>
+                                    </li>
+                                    <li>
+                                        <strong>대표번호</strong>
+                                        <span>1899-8829</span>
+                                    </li>
+                                    <li>
+                                        <strong>개인정보관리책임자</strong>
+                                        <span>정보문</span>
+                                    </li>
+                                </ul>
+                            </div>
 
+                        </div>
+                    </div>
+                    <div class="SNS">
+                        <a href=""><i data-feather="facebook"></i></a>
+                        <a href=""><i data-feather="instagram"></i></a>
+                        <a href=""><i data-feather="youtube"></i></a>
+                    </div>
                 </div>
             </footer>
         </main>
@@ -531,7 +575,7 @@
     </div>
 
     <div class="toTop">
-        <i class="xi-arrow-top"></i>
+        <i data-feather="arrow-up"></i>
     </div>
 </body>
 

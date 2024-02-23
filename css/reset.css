@@ -6,7 +6,8 @@
     font-weight: inherit;
 }
 
-*::before, *::after {
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -16,7 +17,9 @@ body {
     color: #212024;
 }
 
-ul, ol, li {
+ul,
+ol,
+li {
     list-style: none;
 }
 
@@ -30,6 +33,17 @@ img {
     max-width: 100%;
 }
 
-i, em, address {
+i,
+em,
+address {
     font-style: normal;
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
 }

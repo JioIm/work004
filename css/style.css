@@ -84,7 +84,7 @@
 .Header .header_wrap .Gnb>ul>li .Sub {
     position: absolute;
     left: 50%;
-    top: 90px;
+    top: 80px;
     z-index: 1;
 
     transition: 0.2s;
@@ -302,7 +302,6 @@
 .MainContent .Content_inner .tab_content .page {
     position: absolute;
     display: flex;
-    justify-content: space-around;
     width: 440px;
     height: 50px;
     padding: 12px;
@@ -314,8 +313,26 @@
     background: #C4004A;
 }
 
+.MainContent .Content_inner .tab_content .page .button_wrap {
+    display: flex;
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.MainContent .Content_inner .tab_content .page button {
+    background: 0;
+    border: 0;
+    color: #fff;
+}
+
 .MainContent .Content_inner .tab_content .page .txt {
+    position: absolute;
     font-size: 18px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .MainContent .tab_menu li {
@@ -333,17 +350,6 @@
     color: #C4004A;
 }
 
-.main-section-story .tabpanel .swiper-pagination-wrap {
-    display: block;
-    width: 424px;
-    height: 56px;
-    overflow: hidden;
-    left: 152px;
-    bottom: 0;
-    border-radius: 0;
-    background: #000;
-}
-
 
 
 
@@ -353,7 +359,71 @@
 
 .MainIntroduce .inner_wrap {
     display: flex;
+    flex-direction: column;
+    gap: 40px;
     justify-content: space-between;
+    color: #fff;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.MainIntroduce .txt_wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.MainIntroduce .txt_wrap p {
+    line-height: 20px;
+}
+
+.MainIntroduce .intro_txt {
+    /* margin: 0 0 30px 0; */
+}
+
+.MainIntroduce .intro_txt span {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 4px 0;
+}
+
+.MainIntroduce .intro_txt strong {
+    display: block;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.MainIntroduce .inner_txt {
+    flex: 1;
+}
+
+.MainIntroduce dl {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.MainIntroduce dl>dt {
+    display: flex;
+    flex-direction: column;
+}
+
+.MainIntroduce dl>dt>strong {
+    display: block;
+    width: 100px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.MainIntroduce dl>dt>p {
+    line-height: 22px;
+}
+
+.MainIntroduce dl>dt>p>span {
+    font-weight: 600;
 }
 
 
@@ -379,19 +449,27 @@
 .MainProduct .title h2 {
     font-size: 32px;
     font-weight: 600;
-    margin: 0 auto 16px auto;
+    margin: 0 0 16px 0;
 }
 
 .MainProduct .title span {
     display: block;
     font-size: 20px;
     font-weight: 600;
-    margin: 0 auto 8px auto;
+    margin: 0 0 12px 0;
     color: #C4004A;
 }
 
 .MainProduct .title p {
     line-height: 20px;
+    margin: 0 0 16px 0;
+}
+
+.MainProduct .title .desc {
+    line-height: 20px;
+    font-size: 14px;
+    color: #888;
+    margin: 0;
 }
 
 
@@ -413,10 +491,7 @@
     align-items: center;
     text-align: center;
     width: 280px;
-
-    /* border: 1px solid #eee9e5;
-    overflow: hidden;
-    padding: 0 0 40px 0; */
+    cursor: pointer;
 }
 
 .MainProduct .ProductList ul li~li::before {
@@ -424,7 +499,7 @@
     position: absolute;
     width: 1px;
     height: 200px;
-    left: -12px;
+    left: -14px;
     bottom: 50%;
     transform: translate(0, 50%);
     background: #eee9e5;
@@ -452,11 +527,16 @@
 .MainProduct .ProductList ul>li .info_box {
     display: block;
     position: absolute;
-    background: #eee9e5;
-    width: 280px;
+    background: #fff;
+    width: 308px;
     height: 370px;
-    padding: 40px 24px;
-    border-radius: 10px;
+    padding: 40px 20px;
+    border-top: 2px solid #C4004A;
+    border-bottom: 2px solid #C4004A;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+
+    z-index: 99;
     opacity: 0;
 }
 
@@ -465,7 +545,7 @@
 }
 
 .MainProduct .ProductList ul>li .info_box .info_txt {
-    margin: 0 0 24px 0;
+    margin: 0 0 30px 0;
 }
 
 .MainProduct .ProductList ul>li .info_box .info_txt span {
@@ -486,18 +566,19 @@
 .MainProduct .ProductList ul>li .info_box dl dt {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
 }
 
 .MainProduct .ProductList ul>li .info_box dl>dt>span {
     display: block;
     font-weight: 500;
     color: #C4004A;
-    margin: 0 0 6px 0;
+    margin: 0 0 4px 0;
 }
 
 .MainProduct .ProductList ul>li .info_box dl>dt>p {
     margin: 0 0 12px 0;
+    line-height: 16px;
     letter-spacing: -1px;
 }
 
@@ -514,13 +595,19 @@
 
 .footer .inner_wrap {
     display: flex;
-    flex-direction: column;
     max-width: 1200px;
     width: 100%;
+    gap: 80px;
     margin: 0 auto;
-    gap: 30px;
+    align-items: center;
 
     color: #3d3937;
+}
+
+.footer .right {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .footer .footer_menu ul {
@@ -579,16 +666,26 @@
     font-weight: 600;
 }
 
-.footer .footer_bottom .ul_wrap .footer .SNS {
+.footer .left .img_box {}
+
+.footer .left .img_box img {
+    width: 160px;
+}
+
+.footer .SNS {
     justify-content: space-between;
 }
 
-.footer .SNS i {
-    font-size: 30px;
-    padding: 8px;
+.footer .SNS .feather {
+    width: 28px;
+    height: 28px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
 }
 
-.inner_wrap {}
 
 
 
@@ -658,7 +755,7 @@
     left: 0;
     width: 35%;
     height: 2px;
-    background: #eee9e5;
+    background: #888;
 }
 
 #fp-nav ul li a.active::after {

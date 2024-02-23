@@ -1,5 +1,7 @@
 $(function () {
 
+    feather.replace()
+
     $('#main').fullpage({
         anchors: ["p1", "p2", "p3", "p4", "p5"],
         menu: '#custom_nav',
@@ -58,6 +60,12 @@ $(function () {
         //     delay: 2500,
         //     disableOnInteraction: false,
         // },
+
+        navigation: {
+            nextEl: '.page .next',
+            prevEl: '.page .prev',
+        },
+
     });
 
 
@@ -67,12 +75,12 @@ $(function () {
 
 
 
-    $('.MainContent .bt_left').on('click', function () {
-        $('.MainContent .tab_left_slide').slick('slickPrev');
-    });
-    $('.MainContent .bt_right').on('click', function () {
-        $('.MainContent .tab_right_slide').slick('slickNext');
-    });
+    // $('.MainContent .bt_left').on('click', function () {
+    //     $('.MainContent .tab_left_slide').slick('slickPrev');
+    // });
+    // $('.MainContent .bt_right').on('click', function () {
+    //     $('.MainContent .tab_right_slide').slick('slickNext');
+    // });
 
     $('.toTop').on('click', function () {
         $('html, body').animate({ scrollTop: 0 }, 1000)
