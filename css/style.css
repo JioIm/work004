@@ -440,7 +440,7 @@
 
 .MainProduct .title {
     max-width: 1200px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 20px auto;
     padding: 0 15px;
     text-align: center;
 }
@@ -465,11 +465,15 @@
     margin: 0 0 16px 0;
 }
 
-.MainProduct .title .desc {
+/* .MainProduct .title .desc {
     line-height: 20px;
     font-size: 14px;
     color: #888;
     margin: 0;
+} */
+
+.MainProduct .ProductList {
+    margin: 0 0 30px 0;
 }
 
 
@@ -581,8 +585,6 @@
     line-height: 16px;
     letter-spacing: -1px;
 }
-
-
 
 
 
